@@ -1,0 +1,11 @@
+<%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Search Todo Databse:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+<% end %>
+
+<%= form_for @todo do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_field :time %>
+    <%= f.submit "Create" %>
+<% end %>
